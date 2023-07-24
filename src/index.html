@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Learn Tailwind</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+        <link href="/public/css/style.css" rel="stylesheet">
+    </head>
+    <body class="dark:bg-slate-800 dark:text-slate-100">
+        <hr class="my-20">
+
+        <div class="flex justify-center">
+            <span class="text-sm text-slate-500 mr-2">Light</span>
+            <input type="checkbox" name="" id="toggle" class="hidden"/>
+            <label for="toggle">
+                <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer">
+                    <div class="w-4 h-4 bg-white rounded-full dark:translate-x-3"></div>
+                </div>
+            </label>
+            <span class="text-sm text-slate-500 ml-2">Dark</span>
+        </div>
+        
+        <button 
+            class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-serif font-semibold block mx-auto hover:bg-sky-600 active:bg-sky-700 focus:ring focus:ring-sky-300">
+            Simpan
+        </button>
+
+        <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md hover:bg-sky-500 group dark:hover:bg-slate-400">
+            <h5 class="font-bold text-slate-700 text-lg font-inter mb-2 group-hover:text-white dark:group-hover:text-slate-800  ">My Card</h5>
+            <p class="text-slate-600 font-inter text-justify group-hover:text-white dark:group-hover:text-slate-800">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab impedit et maiores facilis aliquam officia molestiae molestias sed repellat suscipit dignissimos id vel, exercitationem cupiditate, dolores natus inventore commodi maxime veniam reprehenderit, architecto praesentium itaque delectus. Obcaecati totam illo tenetur!</p>
+        </div>
+
+        <div class="max-w-lg border-slate-200 rounded-xl mx-auto shadow-md font-inter p-5">
+            <form action="" method="get">
+                <label for="email">
+                    <span class="block font-semibold mb-1 text-slate-700 after:content-['*'] after:ml-0.5 after:text-pink-700">Email</span>
+                    <input type="email" id="email" placeholder="masukkan email..." 
+                        class="w-full px-3 py-2 border shadow rounded block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 invalid:text-pink-700 invalid:focus:ring-pink-700 peer" 
+                    />
+                    <p class="text-xs text-pink-700 m-1 invisible peer-invalid:visible">Email tidak valid</p>
+                </label>
+            </form>
+        </div>
+
+
+        <script>
+            const checkbox = document.querySelector('#toggle');
+            const html = document.querySelector('html');
+
+            checkbox.addEventListener('click', function(){
+                checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
+            })
+        </script>
+    </body>
+</html>
