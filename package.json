@@ -1,4 +1,15 @@
 {
+  "name": "tailwind",
+  "version": "1.0.0",
+  "description": "tailwind",
+  "main": "tailwind.config.js",
+  "devDependencies": {},
+  "scripts": {
+    "dev-tailwind" : " npx tailwindcss -i ./input.css -o ./public/css/style.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "isac",
+  "license": "ISC",
   "dependencies": {
     "tailwindcss": "^3.3.3"
   }
