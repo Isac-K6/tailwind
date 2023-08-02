@@ -7,6 +7,9 @@ module.exports = {
       fontFamily:{
         inter: ['Inter']
       },
+      colors: {
+        primary: '#3258a8'
+      },
       animation: {
         'spin-slow' : 'spin 3s linear infinite',
         'wiggle-slow': 'wiggle 1s ease-in-out infinite'

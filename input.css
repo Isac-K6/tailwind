@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-6xl font-bold;
+    color: theme('colors.primary')
+  }
+}
+
+@layer components {
+  .gallery-grid-card {
+    @apply bg-blue-500 aspect-[4/3] rounded-lg lg:aspect-[3/4] xl:aspect-[4/3] overflow-hidden hover:scale-95 duration-500;
+  }
+
+  .gallery-card-image{
+    @apply w-full h-full bg-cover bg-center group-hover:scale-125 duration-500;
+  }
+}
